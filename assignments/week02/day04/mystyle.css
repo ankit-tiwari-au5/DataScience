@@ -1,0 +1,49 @@
+html{
+    background-color: gray;
+    top:0;
+    left: 0;
+    height: 20px;
+    width:100%;
+}
+.body{
+    background-color: seagreen;
+}
+.table1{
+    border:2px solid black;
+    height:400px;
+    width:78%;
+    position: absolute;
+    left:325px;
+    bottom: 245px;
+    background-color: burlywood;
+}
+.Footer1{
+    border:2px solid black;
+    position: absolute;
+    bottom: 20px;
+    left:80px;
+    width: 100%;
+    right:100px;
+    bottom: 120px;
+    background-color: lightblue;
+}
+.Header1{
+    border:2px solid black;
+    position: relative;
+    bottom: 20px;
+    left:80px;
+    width: 100%;
+    right:100px;
+    background-color:lightblue;
+}
+.div1{
+    border: 2px solid black;
+    height:350px;
+    width: 19%;
+    top:130px;
+    background-color:darkgray;
+    padding-top:50px;
+}
+.container{
+    width: 100%;
+}
