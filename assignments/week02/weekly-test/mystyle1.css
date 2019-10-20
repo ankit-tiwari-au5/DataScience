@@ -36,37 +36,54 @@
 
 }
 .div5{
-        background-color:white;
+        background-color:rgb(189, 11, 11);
         border:2px solid black;
         height:20%;
         padding:10px 20px 30px 40px;
         margin:1%;
+        font-style: initial;
+        font-size: 200%;
+        color: White;
 }
 .div6{
-    background-color:white;
+    background-color:rgb(58, 4, 129);
     border:2px solid black;
     height:20%;
     padding:10px 20px 30px 40px;
     margin:1%;
+    font-style: initial;
+    font-size:200%;
+    color:whitesmoke;
 }
 .div7{
-    background-color:white;
+    background-color:rgb(243, 10, 10);
     border:2px solid black;
     height:20%;
     padding:10px 20px 30px 40px;
     margin:1%;
+    font-style: initial;
+    font-size:200%;
+    color:whitesmoke;
+
 }
 .div8{
-    background-color:white;
+    background-color:rebeccapurple;
     border:2px solid black;
     height:20%;
     padding:10px 20px 30px 40px;
     margin:1%;
+    font-style: initial;
+    font-size:200%;
+    color:whitesmoke;
+
 }
 .div9{
-    background-color:white;
+    background-color:rgb(26, 4, 87);
     border:2px solid black;
     height:20%;
     padding:10px 20px 30px 40px;
     margin:1%;
+    font-style: initial;
+    font-size:200%;
+    color:whitesmoke
 }
