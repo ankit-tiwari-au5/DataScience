@@ -2,6 +2,9 @@
     background: linear-gradient(to bottom, #33ccff 100%, #ff99cc 0%);
     position: center;
     bottom: 120px;
+    position:fixed;
+    margin-top: 0px;
+    top: 0px;
    
 }
 .headerFooter{
@@ -33,11 +36,12 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 100px; 
+    float: inherit;
   }
 .Footer1{
     background: linear-gradient(to bottom, #33ccff 100%, #ff99cc 0%);
-    position: center;
-    bottom: 120px;
+    position: fixed;
+    bottom: 0px;
 }
 .div5{
         background-color:rgb(189, 11, 11);
@@ -115,13 +119,17 @@
     background-color:rgb(243, 10, 10);
     height: 100px;
     width:20%;
-    font-size: 100%;   
+    font-size: 100%;
+    float: inherit;
+
 }
 .button2{
     background-color:rgb(58, 4, 129);
     height: 100px;
     width:20%;
-    font-size: 100%;   
+    font-size: 100%; 
+    float: inherit;
+  
 }
 .button3{
     background-color: rgb(243, 10, 10);
