@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <titleCoding_Chaalenge_Tuesday</title> </head> <body>
+        <script>
+            mainStar()
+            function mainStar() {
+                var a = 6;
+                var b = 6;
+                var star1 = "";
+                for (var i = 1; i < a; i++) {
+                    for (var j = 1; j < b; j++) {
+                        if (i >= j) {
+                            star1 = star1.concat("*");
+                        }
+                    }
+                    star1 = star1.concat("\n")
+                }
+                console.log(star1)
+                var star2 = "";
+                for (var i = 1; i < a; i++) {
+                    for (var j = 1; j < b; j++) {
+                        if (j >= i) {
+                            star2 = star2.concat("*");
+                        }
+                    }
+                    star2 = star2.concat("\n")
+                }
+                console.log(star2)
+            }
+        </script>
+        </body>
+
+</html>
