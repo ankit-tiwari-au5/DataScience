@@ -17,17 +17,17 @@
                     }
                     star1 = star1.concat("\n")
                 }
-                console.log(star1)
+                
                 var star2 = "";
-                for (var i = 1; i < a; i++) {
-                    for (var j = 1; j < b; j++) {
+                for (var i = 1; i < a-1; i++) {
+                    for (var j = 1; j < b-1; j++) {
                         if (j >= i) {
                             star2 = star2.concat("*");
                         }
                     }
                     star2 = star2.concat("\n")
                 }
-                console.log(star2)
+                
                 console.log(star1+star2)
             }
             
