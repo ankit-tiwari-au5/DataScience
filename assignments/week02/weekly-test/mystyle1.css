@@ -1,0 +1,180 @@
+.Header1{
+    background: linear-gradient(to bottom, #33ccff 100%, #ff99cc 0%);
+    position: center;
+    bottom: 120px;
+    position:fixed;
+    margin-top: 0px;
+    top: 0px;
+   
+}
+.headerFooter{
+    width: 100%;
+    height: 100px;
+}
+.div2{
+    background: linear-gradient(to bottom, #33ccff 100%, #ff99cc 0%);
+        border:2px solid black;
+        height:20%;
+        padding:10px 20px 30px 40px;
+        margin:1%;
+}
+.div1{
+        background: linear-gradient(to bottom, #33ccff 100%, #ff99cc 0%);
+        border:2px solid black;
+        height:20%;
+        padding:10px 20px 30px 40px;
+        margin:1%;
+
+}
+.button {
+    background-color: rgb(76, 175, 167);
+    border: none;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px; 
+    float: inherit;
+  }
+.Footer1{
+    background: linear-gradient(to bottom, #33ccff 100%, #ff99cc 0%);
+    position: fixed;
+    bottom: 0px;
+}
+.div5{
+        background-color:rgb(189, 11, 11);
+        border:2px solid black;
+        height:20%;
+        padding:10px 20px 30px 40px;
+        margin:1%;
+        font-style: initial;
+        font-size: 150%;
+        color: White;
+}
+.div6{
+    background-color:rgb(58, 4, 129);
+    border:2px solid black;
+    height:20%;
+    padding:10px 20px 30px 40px;
+    margin:1%;
+    font-style: initial;
+    font-size:150%;
+    color:whitesmoke;
+}
+.div7{
+    background-color:rgb(243, 10, 10);
+    border:2px solid black;
+    height:20%;
+    padding:10px 20px 30px 40px;
+    margin:1%;
+    font-style: initial;
+    font-size:150%;
+    color:whitesmoke;
+
+}
+.div8{
+    background-color:rebeccapurple;
+    border:2px solid black;
+    height:20%;
+    padding:10px 20px 30px 40px;
+    margin:1%;
+    font-style: initial;
+    font-size:150%;
+    color:whitesmoke;
+
+}
+.div9{
+    background-color:rgb(26, 4, 87);
+    border:2px solid black;
+    height:20%;
+    padding:10px 20px 30px 40px;
+    margin:1%;
+    font-style: initial;
+    font-size:150%;
+    color:whitesmoke
+}
+.div10{
+    background-color:rebeccapurple;
+    border:2px solid black;
+    height:20%;
+    padding:10px 20px 30px 40px;
+    margin:1%;
+    font-style: initial;
+    font-size:150%;
+    color:whitesmoke;
+}
+.div11{
+    background-color:rgb(189, 11, 11);
+    border:2px solid black;
+    height:20%;
+    padding:10px 20px 30px 40px;
+    margin:1%;
+    font-style: initial;
+    font-size: 150%;
+    color: White;
+}
+.button1{
+    background-color:rgb(243, 10, 10);
+    height: 100px;
+    width:20%;
+    font-size: 100%;
+    float: inherit;
+
+}
+.button2{
+    background-color:rgb(58, 4, 129);
+    height: 100px;
+    width:20%;
+    font-size: 100%; 
+    float: inherit;
+  
+}
+.button3{
+    background-color: rgb(243, 10, 10);
+    height: 100px;
+    width:20%;
+    font-size: 100%;   
+}
+.button4{
+    background-color:rebeccapurple;
+    height: 100px;
+    width:20%;
+    font-size: 100%;   
+}
+.button5{
+    background-color:rgb(26, 4, 87);
+    height: 100px;
+    width:20%;
+    font-size: 100%;   
+}
+.button6{
+    background-color:rebeccapurple;
+    height: 100px;
+    width:20%;
+    font-size: 100%;   
+}
+.button7{
+    background-color:rgb(189, 11, 11);
+    height: 100px;
+    width:20%;
+    font-size: 100%;   
+}
+.button8{
+    background-color: #ddd;
+    border: none;
+    color: blue;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+  #submit-button{
+      border-radius: 20px;
+      background-color: blue
+  }
+
