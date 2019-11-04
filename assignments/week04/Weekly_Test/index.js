@@ -1,21 +1,25 @@
 var input = document.createElement("input")
 input.setAttribute("id", "firstName")
 input.setAttribute("type", "text")
+input.setAttribute("placeholder", "Enter Your First Name")
 document.body.appendChild(input)
 
 var input1 = document.createElement("input")
 input1.setAttribute("id", "lastName")
 input1.setAttribute("type", "text")
+input1.setAttribute("placeholder", "Enter Your Last Name")
 document.body.appendChild(input1)
 
 var input2 = document.createElement("input")
 input2.setAttribute("id", "Email")
 input2.setAttribute("type", "text")
+input2.setAttribute("placeholder", "Enter Your Email Id")
 document.body.appendChild(input2)
 
 var input3 = document.createElement("input")
 input3.setAttribute("id", "mobileNumber")
 input3.setAttribute("type", "text")
+input3.setAttribute("placeholder", "Enter Your MobileNumber")
 document.body.appendChild(input3)
 
 var button = document.createElement("button")
@@ -43,8 +47,40 @@ thead.appendChild(th3)
 var tbody = document.createElement("tbody")
 table.appendChild(tbody)
 
-var array = []
+function mobileValidate() {
+    var text = document.getElementById("mobileNumber").value;
+    var regx = /^[7-9]\d{9}/;
+    if (regx.test(text)) {
+        document.getElementById("mobileNumber").innerHTML = "Valid";
+        document.getElementById("mobileNumber").style.visibility = "visible";
+        document.getElementById("mobileNumber").style.color = "green";
+    }
+    else {
+        document.getElementById("mobileNumber").innerHTML = "Invalid";
+        document.getElementById("mobileNumber").style.visibility = "visible";
+        document.getElementById("mobileNumber").style.color = "red";
 
+    }
+}
+
+function emailValidate() {
+    var text = document.getElementById("Email").value;
+    var regx = /^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+    if (regx.test(text)) {
+        document.getElementById("Email").innerHTML = "Valid";
+        document.getElementById("Email").style.visibility = "visible";
+        document.getElementById("Email").style.color = "green";
+        return 1
+    }
+    else {
+        document.getElementById("Email").innerHTML = "Invalid";
+        document.getElementById("Email").style.visibility = "visible";
+        document.getElementById("Email").style.color = "red";
+        return 0
+    }
+}
+
+var array = []
 function storeValues() {
     array[0] = document.getElementById("firstName").value;
     array[1] = document.getElementById("lastName").value;
@@ -54,12 +90,16 @@ function storeValues() {
 }
 
 document.getElementById("save").onclick = function acceptValue() {
-    
-        storeValues()
-        if (array[0] === ""||array[1] === ""||array[2] === ""||array[3] === "") {
-            alert("please enter the correct values")
-        }
-        else {
+
+    storeValues()
+
+
+    if (array[0] === "" || array[1] === "" || array[2] === "" || array[3] === "") {
+        alert("please enter the correct values")
+    } else if (!mobileValidate() && !emailValidate()) {
+        alert("please enter the valid Mobile Number or Email ID")
+    }
+    else {
         var table1 = document.getElementById("table");
         var row = table.insertRow(0);
         var cell1 = row.insertCell(0);
@@ -70,8 +110,6 @@ document.getElementById("save").onclick = function acceptValue() {
         cell2.innerHTML = array[1];
         cell3.innerHTML = array[2];
         cell4.innerHTML = array[3];
-
-
     }
 }
 
