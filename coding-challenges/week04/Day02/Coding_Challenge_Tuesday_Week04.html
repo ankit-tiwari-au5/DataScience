@@ -6,19 +6,22 @@
 
 <body>
     <script>
-
-isPrime(17)
+console.log(isPrime(77))
 function isPrime(num){
 var i;
 var num;
-for(i=2;i<num;i++){
+var isPrime = false
+for(i=2;i<num/2;i++){
   if(num%i===0){
-    alert( num + " is not a Prime Number");
-    return false;
+   
+    isPrime = false
+    return isPrime
+  }else {
+       
+     isPrime = true   
   }
-  alert( num + " is a Prime Number");
-  return true;
 }
+return isPrime
 }
     
     </script>
