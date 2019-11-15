@@ -5,7 +5,9 @@ document.body.appendChild(h1)
 var table = document.createElement("table")
 table.setAttribute("border", '')
 table.setAttribute("id", "table1")
+table.setAttribute("class", "table table-striped")
 document.body.appendChild(table)
+
 
 
 var thead = document.createElement("thead")
@@ -21,6 +23,8 @@ thead.appendChild(th)
 var th1 = document.createElement("th")
 th1.innerHTML = "Squares"
 thead.appendChild(th1)
+
+
 
 var table = document.getElementById("table1");
 
