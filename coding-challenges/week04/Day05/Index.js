@@ -5,7 +5,7 @@ document.body.appendChild(h1)
 var table = document.createElement("table")
 table.setAttribute("border", '')
 table.setAttribute("id", "table1")
-table.setAttribute("class", "table table-striped")
+table.setAttribute("class", "table table-striped table-dark")
 document.body.appendChild(table)
 
 
