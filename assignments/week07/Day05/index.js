@@ -7,10 +7,10 @@ app.get('/create/:name/:mobileNo',function(req,res){
     res.send(array)
 })
 
-app.get('/add/:num/:name/:mobileNo',function(req,res){
-    array.splice((req.params.num), 0, {name:req.params.name, mobileNo:req.params.mobileNo})
+app.get('/read/',function(req,res){
     res.send(array)
 })
+
 
 app.get('/update/:num/:name/:mobileNo',function(req,res){
     array[req.params.num].name=req.params.name
