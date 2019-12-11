@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<input type="file" name="file" id="file">
+<script>
+document.getElementById('file').onchange = function(){
+  var file = this.files[0];
+  var substr = "SMALL LETTER";
+  var reader = new FileReader();
+  reader.onload = function(progressEvent){
+    // By lines
+    var lines = this.result.split('\n');
+    for(var line = 0; line < lines.length; line++){
+    var myRe = new RegExp( substr , 'g');
+    if(lines[line].match(myRe))
+      console.log(line+1);
+    }
+  };
+  reader.readAsText(file);
+};
+</script>
+</body>
+</html>
