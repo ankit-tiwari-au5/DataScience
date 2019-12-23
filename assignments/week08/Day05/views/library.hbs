@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+        <form action="/search" method="POST" class="form-group">
+                <button class="float-right ml-4 mt-3  btn btn-success">Search</button>
+                <input type="text" name="language" class="float-right p-1 pb-2 mt-3" required>
+                <h6 class="float-right text-muted mt-4 mr-3">Enter language here : </h6><br>
+
+            </form>
+
+    <table class="table table-striped mt-3" id="table_data">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">country</th>
+                <th scope="col">Language</th>
+                <th scope="col">Link</th>
+                <th scope="col">Page</th>
+                <th scope="col">year</th>
+            </tr>
+        </thead>
+        <tbody id="data2"></tbody>
+        {{#each books}}
+        <tr>
+                <th scope="col">{{title}}</th>
+                <th scope="col">{{author}}</th>
+                <th scope="col">{{country}}</th>
+                <th scope="col">{{language}}</th>
+                <th scope="col">{{link}}</th>
+                <th scope="col">{{page}}</th>
+                <th scope="col">{{year}}</th>
+            </tr>
+        {{/each}}
+    </table>
+
+
+
+</body>
+
+</html>
