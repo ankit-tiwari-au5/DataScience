@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Flipkart</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <body>
+     <nav id="mainnav" class="navbar bg-primary navbar-dark navbar-expand-md ">
+<a href="/" id="title1" class="navbar-brand"><img src="https://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/fk-plus_043837.png" width="100px" title="flipkart"  alt=""></a><a href="/" id="title2"></a>
+    </div>
+    <div>
+  <input class="form-control my-0 py-1" type="text" placeholder="Search for products,brands and more" aria-label="Search">
+</div>
+<button class="navbar-toggler" data-toggle="collapse" data-target="#navlinks">
+<span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navlinks">
+<ul class="navbar-nav ml-auto">
+       
+<li class="navbar-item">    
+        <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    My Account
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="logout">Logout</a>
+  </div>
+</div></li>
+<li class="navbar-item"><a href="add" class="nav-link">Add product</a></li>
+<li class="navbar-item"><span id="counter" class="badge badge-danger" value=""></span><a href="" class="nav-link"><svg width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="_2JpNOH" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg><strong>Cart</strong></a>
+        <span id="counter" class="badge badge-danger" value=""></span>
+        </li>
+       
+</ul>
+</div></nav>
+<div class="container">
+<img src="" alt="">
+<h1>Product Specifications</h1>
+<div class="col-md-3 col-sm-6 card">
+    <img class="card-img-top" src="uploads/{{result.image}}">
+
+<div>
+    <h1>{{result.category}}</h1>
+    <h2 class="card-header bg-dark text-center text-white">{{result.product}}</h2>
+    <p></p>
+    <p></p>
+    <p></p>
+     <ul class="list-group list-group-flush">
+    <li class="list-group-item">Price:{{result.price}}</li>
+    <li class="list-group-item">Discount:{{result.discount}}%</li>
+    <li class="list-group-item">Highlighted features:{{result.highlight}}%</li>
+  </ul>
+</div>
+</div>
+</div>
+<input onclick="change()" type="button" value="Add to Cart" id="cart" class="btn btn-warning ">
+<button id="buy" type="button" style="background-color:#ff751a;"class="btn btn-md"><i class="fas fa-bolt" >Buy Now</i></button>
+<script>
+   var addcart=document.getElementById('cart')
+   function change(){
+       var cart=0width
+       cart+=1
+       if(addcart.value=="Add to Cart")
+       addcart.value="Go to cart"
+
+       var span1=document.getElementById('counter')
+       span1.innerText=cart
+   }
+</script>
+</html>
