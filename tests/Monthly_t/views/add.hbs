@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>AddProduct</title>
+    
+<script>
+    function doThis(e)
+    {
+        let finalDiv = document.getElementById('concat-high');
+        let allHighs = document.getElementsByClassName('highlightx');
+        let FinaString = '';
+        for(let area of allHighs)
+        {
+            FinalString+=area.value;
+        }
+        finalDiv.value = FinalString;
+
+    }
+
+
+    function Validate()
+    {
+        let deal = document.getElementById('deal');
+        let top = document.getElementById('top');
+        if(deal.checked == true)
+        {
+            top.checked = false;
+        }
+
+        if(top.checked == true)
+        {
+            deal.checked = false;
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <h1>Enter product </h1>
+                <form onsubmit="return doThis(event)" action="add" method="POST" class="form-group mt-4" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="email">Category</label>
+                        <input type="text" name="category" id="category" placeholder="Enter Category" class="form-control mt-2">
+                    </div>
+                     <div class="form-group">
+                        <label for="product">Name of product</label>
+                        <input type="text" name="product" id="product" placeholder="Enter name of product" class="form-control mt-2">
+                    </div>
+                   <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description" placeholder="Enter description of product" class="form-control mt-2">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" name="image" id="file" placeholder="Enter image" class="form-control mt-2">
+                    </div>
+                    <div class="form-group">
+                        <label for="highlights">Highlights</label>
+                        <input type="text" name="fghjkloikhv" placeholder="Enter Highlights" class="highlightx form-control mt-2">
+                        <div class="" id="highlight-area">
+
+                        </div>
+                        <button name="ah" id="ah" type="button">+</button>
+                        <input type="hidden" name="highlight" id="concat-high">
+                        
+                    </div>
+                     <div class="form-group">
+                        <label for="product">Price</label>
+                        <input type="text" name="price" id="price" placeholder="Enter price" class="form-control mt-2">
+                    </div>
+                     <div class="form-group">
+                        <label for="product">Discount</label>
+                        <input type="text" name="discount" id="discount" placeholder="Enter discount" class="form-control mt-2">
+                    </div>
+                    <div class="form-group">
+                        <input onchange="Validate()" type="checkbox" name="deal" id="deal" class=" mt-2">Deal of the day
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Top Selection</label>
+                        <input onchange="Validate()" type="checkbox" name="top" id="top" class="mt-2">
+                    </div>
+                    <button onclick="doThis(e);" type="submit">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //
+    let higArea = document.getElementById('highlight-area');
+    document.getElementById('ah').addEventListener('click', () =>{
+        let input = document.createElement('input');
+        input.class = 'highlightx form-control mt-2';
+        input.setAttribute('placeholder', 'Enter Highlights');
+        higArea.appendChild(input);
+    });
+</script>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>AddProduct</title>
+    <style>
+  
+<script>
+    function doThis(e)
+    {
+        let finalDiv = document.getElementById('concat-high');
+        let allHighs = document.getElementsByClassName('highlightx');
+        let FinaString = '';
+        for(let area of allHighs)
+        {
+            FinalString+=area.value;
+        }
+        finalDiv.value = FinalString;
+
+    }
+
+
+    function Validate()
+    {
+        let deal = document.getElementById('deal');
+        let top = document.getElementById('top');
+        if(deal.checked == true)
+        {
+            top.checked = false;
+        }
+
+        if(top.checked == true)
+        {
+            deal.checked = false;
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <h1>Enter product </h1>
+                <form onsubmit="return doThis(event)" action="add" method="POST" class="form-group mt-4" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="email">Category</label>
+                        <input type="text" name="category" id="category" placeholder="Enter Category" class="form-control mt-2">
+                    </div>
+                     <div class="form-group">
+                        <label for="product">Name of product</label>
+                        <input type="text" name="product" id="product" placeholder="Enter name of product" class="form-control mt-2">
+                    </div>
+                   <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description" placeholder="Enter description of product" class="form-control mt-2">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" name="image" id="file" placeholder="Enter image" class="form-control mt-2">
+                    </div>
+                    <div class="form-group">
+                        <label for="highlights">Highlights</label>
+                        <input type="text" name="fghjkloikhv" placeholder="Enter Highlights" class="highlightx form-control mt-2">
+                        <div class="" id="highlight-area">
+
+                        </div>
+                        <button name="ah" id="ah" type="button">+</button>
+                        <input type="hidden" name="highlight" id="concat-high">
+    
+
+                    </div>
+                     <div class="form-group">
+                        <label for="product">Price</label>
+                        <input type="text" name="price" id="price" placeholder="Enter price" class="form-control mt-2">
+                    </div>
+                     <div class="form-group">
+                        <label for="product">Discount</label>
+                        <input type="text" name="discount" id="discount" placeholder="Enter discount" class="form-control mt-2">
+                    </div>
+                    <div class="form-group">
+                        <input onchange="Validate()" type="checkbox" name="deal" id="deal" class=" mt-2">Deal of the day
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Top Selection</label>
+                        <input onchange="Validate()" type="checkbox" name="top" id="top" class="mt-2">
+                    </div>
+                    <button onclick="doThis(e);" type="submit">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //
+    let higArea = document.getElementById('highlight-area');
+    document.getElementById('ah').addEventListener('click', () =>{
+        let input = document.createElement('input');
+        input.class = 'highlightx form-control mt-2';
+        input.setAttribute('placeholder', 'Enter Highlights');
+        higArea.appendChild(input);
+    });
+</script>
+</html>
