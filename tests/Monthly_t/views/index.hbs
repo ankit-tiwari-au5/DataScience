@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,51 +51,54 @@
       </ul>
     </div>
   </nav>
-  <div><h1 col-md-3>Deals Of The Day</h1>
-  <h4 id = "timer"></h4>
-  
+  <div>
+    <h1 col-md-3>Deals Of The Day</h1>
+    <h4 id="timer"></h4>
+
   </div>
   <div class="row" class="container">
-   
+
 
     {{#each deals}}
-    
-    
-    
+
+
+
     <div class="col-md-3 col-sm-6 card">
-    
+
       <h4 class="card-header text-center">{{category}}</h4>
       <img src="uploads/{{image}}" alt="">
       <h4 class="card-footer text-center" style="color: green;">Min {{discount}} %off</h4>
-      
+
       <h4 class="card-body text-center">{{description}}</h4>
       <h4 class="card-footer text-center">{{highlight}}</h4>
       <h4 class="card-footer text-center">{{price}}</h4>
 
     </div>
     {{/each}}
-  
+
   </div>
-   <div><h1 col-md-3>Top Product</h1></div>
- <div class="row" class="container">
-  
-   
+  <div>
+    <h1 col-md-3>Top Product</h1>
+  </div>
+  <div class="row" class="container">
+
+
 
     {{#each top}}
-    
-    
+
+
     <div class="col-md-3 col-sm-6 card">
       <h4 class="card-header text-center">{{category}}</h4>
       <img src="uploads/{{image}}" alt="">
       <h4 class="card-footer text-center" style="color: green;">Min {{discount}} %off</h4>
-      
+
       <h4 class="card-body text-center">{{description}}</h4>
       <h4 class="card-footer text-center">{{highlight}}</h4>
       <h4 class="card-footer text-center">{{price}}</h4>
 
     </div>
     {{/each}}
-  
+
   </div>
 
 </body>
@@ -105,34 +109,34 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("Jan 03, 2020 23:00:00").getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function () {
+  var countDownDate = new Date("Jan 03, 2020 23:00:00").getTime();
 
-        // Get today's date and time
-        var now = new Date().getTime();
 
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
+  var x = setInterval(function () {
 
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="demo"
-        document.getElementById("timer").innerHTML = days + " : " + hours + " : "
-            + minutes + " : " + seconds + " left";
+    var now = new Date().getTime();
 
-        // If the count down is over, write some text 
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("timer").innerHTML = "EXPIRED";
-        }
-    }, 1000);
+
+    var distance = countDownDate - now;
+
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+    document.getElementById("timer").innerHTML = days + " : " + hours + " : "
+      + minutes + " : " + seconds + " left";
+
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+  }, 1000);
 </script>
 
 </html>
