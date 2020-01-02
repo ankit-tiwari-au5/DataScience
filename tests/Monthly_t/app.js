@@ -201,13 +201,14 @@ app.get("/add", function (req, res) {
 });
 
 app.post("/add", function (req, res) {
-    if (!req.session.user)
-        res.redirect("/login");
-    else {
+     if (!req.session.user)
+         res.redirect("/login");
+     else {
         var form = new multiparty.Form({
             uploadDir: "public/uploads"
         })
-        form.parse(req, (err, field) => {
+        form.parse(req, (err, fields,files) => {
+            console.log(fields)
             var product = {
 
                 "category": fields.category[0],
@@ -215,9 +216,8 @@ app.post("/add", function (req, res) {
                 "description": fields.description[0],
                 "highlight": fields.highlight[0],
                 "price": fields.price[0],
-                "discount": fields.discount[0]
-
-
+                "discount": fields.discount[0],
+                "image":files.image[0].path.split("\\")[2]
             }
             if (fields.deal) {
                 product.deal = true
@@ -231,7 +231,7 @@ app.post("/add", function (req, res) {
                 res.redirect("/home")
             })
         })
-    }
+   }
 })
 
 app.get("/product", function (req, res) {
