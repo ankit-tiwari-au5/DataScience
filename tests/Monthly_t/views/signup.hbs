@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <h1>Signup Form </h1>
+                <form action="signup" method="POST" class="form-group mt-4">
+                    <div class="form-group">
+                        <label for="name">First Name</label>
+                        <input type="text" name="fname" class="form-control" id="fname">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Last Name</label>
+                        <input type="text" name="lname" class="form-control" id="lname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Email" class="form-control mt-2">
+                    </div>
+                     <div class="form-group">
+                        <label for="phone">Mobile number</label>
+                        <input type="number" name="phone" id="phone" placeholder="Mobile number" class="form-control mt-2">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="confirm_password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        {{#if mismatch}}
+                            <div class="alert alert-danger">
+                                Required password and confirm password donot match
+                            </div>
+                       
+                        {{else if ematch}}
+                            <div class="alert alert-danger">
+                                Invalid email
+                            </div>
+                     
+                        {{else if fmatch}}
+                            <div class="alert alert-danger">
+                                Invalid first name
+                            </div>
+                   
+                        {{else if lmatch}}
+                            <div class="alert alert-danger">
+                                Invalid last name
+                            </div>
+                       
+                        {{else pmatch}}
+                            <div class="alert alert-danger">
+                                Invalid Phone number                            </div>
+                        {{/if}}
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary mt-2">Signup</button>
+                    </div>
+                </form>
+                <div>
+                   Have an account?
+                    <a href="login">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

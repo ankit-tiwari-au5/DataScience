@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dream Team</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container ">
+        <form class="mb-5 p-5" action="/cricketPlayer" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control" name="age" placeholder="age">
+                </div>
+                <div class="col">
+                    <input type="file" class="form-control" name="image">
+                </div>
+               {{#if full}}
+                <div class="col">
+                    <button class="btn btn-info" type="submit">Add Player</button>
+                </div>
+                {{else}}
+               <div class="col">
+                    <button class="btn btn-info" type="submit" disabled>Can't add 12th player</button>
+                </div>
+                {{/if}}
+            </div>
+        </form>
+
+        <div class="row">
+            {{#each cricketPlayers}}
+             <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text">{{age}}</p>
+                    </div>
+                </div>
+            </div>
+             {{/each}}
+          </div>
+           
+    </div>
+</body>
+<script>
+</script>
+</html>

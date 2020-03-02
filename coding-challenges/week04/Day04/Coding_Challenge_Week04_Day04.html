@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Coding_Test_Week04_Day04</title>
+</head>
+
+<body>
+    <script>
+    function isEqual() 
+{ 
+ var a = ["apple", "banana", "orange", 1,2]; 
+ var b = ["apple", "banana", "orange", 1,2]; 
+  if(a.length!=b.length) 
+   return "False"; 
+  else
+  { 
+   for(var i=0;i<a.length;i++) 
+   if(a[i]!=b[i]) 
+    return "False"; 
+    return "True"; 
+  } 
+} 
+var c = isEqual(); 
+document.write(c);      
+    </script>
+</body>
+</html>
